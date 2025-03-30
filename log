@@ -145,3 +145,18 @@ list.c:47:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 5ab6c00
+Sun 30 Mar 2025 12:52:29 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:46:24: error: ‘Node’ has no member named ‘date’; did you mean ‘data’?
+   46 |     return list->head->date;
+      |                        ^~~~
+      |                        data
+list.c:47:1: error: control reaches end of non-void function [-Werror=return-type]
+   47 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1207fab
