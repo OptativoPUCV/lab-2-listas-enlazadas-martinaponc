@@ -73,7 +73,7 @@ void * prevList(List * list) {
 
     Node *temp = list->head;
 
-    while(temp->next != list->current){
+    while(temp->next != NULL && temp->next != list->current){
         temp = temp->next;
     }
     list->current = temp;
