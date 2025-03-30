@@ -43,7 +43,7 @@ void * firstList(List * list) {
         return NULL;
 
     list->current = list->head;
-    return list->head->date;
+    return list->head->data;
 }
 
 void * nextList(List * list) {
