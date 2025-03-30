@@ -124,7 +124,10 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    if(list->current == NULL){
+        return NULL;
+    }
+    free(list->current);
 }
 
 void cleanList(List * list) {
