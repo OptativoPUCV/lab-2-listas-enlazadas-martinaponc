@@ -132,7 +132,7 @@ void * popCurrent(List * list) {
 
     //SI EL ELEMENTO A ELIMINAR ES EL UNICO
 
-    if(list->current == list->head && list->current = list->tail){
+    if(list->current == list->head && list->current == list->tail){
         list->head = NULL;
         list->tail = NULL;
     }
