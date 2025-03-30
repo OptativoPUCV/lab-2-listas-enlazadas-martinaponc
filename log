@@ -2,3 +2,20 @@ Sun 30 Mar 2025 12:38:16 AM UTC:
  tests:  0|6
 total_score: 0/70
 25021aa
+Sun 30 Mar 2025 12:39:35 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:12: error: unused variable ‘lista’ [-Werror=unused-variable]
+   32 |      List *lista = createList();
+      |            ^~~~~
+list.c:31:8: error: infinite recursion detected [-Werror=infinite-recursion]
+   31 | List * createList() {
+      |        ^~~~~~~~~~
+list.c:32:20: note: recursive call
+   32 |      List *lista = createList();
+      |                    ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2041c37
