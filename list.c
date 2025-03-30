@@ -33,13 +33,15 @@ List * createList() {
     if(L == NULL){
         return NULL;
     }
+    L->head = NULL;
+    L->current = NULL;
     return L;
 }
 
 void * firstList(List * list) {
     if(list->head == NULL)
         return NULL;
-    
+
     list->current = list->head;
     return list->head;
 }
