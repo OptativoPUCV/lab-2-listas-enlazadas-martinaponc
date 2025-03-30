@@ -294,3 +294,9 @@ list.c:85:11: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 e69f12d
+Sun 30 Mar 2025 01:11:14 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+b208b8d
