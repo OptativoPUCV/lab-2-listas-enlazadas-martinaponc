@@ -42,3 +42,18 @@ Sun 30 Mar 2025 12:42:56 AM UTC:
  tests:  1|5
 total_score: 10/70
 b4b6cd4
+Sun 30 Mar 2025 12:47:09 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:24: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+   40 |     return list->head->dato;
+      |                        ^~~~
+      |                        data
+list.c:41:1: error: control reaches end of non-void function [-Werror=return-type]
+   41 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+89cf684
