@@ -19,3 +19,20 @@ list.c:32:20: note: recursive call
 cc1: all warnings being treated as errors
 Compilation failed
 2041c37
+Sun 30 Mar 2025 12:39:47 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:12: error: unused variable ‘L’ [-Werror=unused-variable]
+   32 |      List *L = createList();
+      |            ^
+list.c:31:8: error: infinite recursion detected [-Werror=infinite-recursion]
+   31 | List * createList() {
+      |        ^~~~~~~~~~
+list.c:32:16: note: recursive call
+   32 |      List *L = createList();
+      |                ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9b5f587
