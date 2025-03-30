@@ -363,3 +363,13 @@ Sun 30 Mar 2025 01:29:58 AM UTC:
  tests:  11|1
 total_score: 55/70
 a10718a
+Sun 30 Mar 2025 01:41:12 AM UTC: 
+ list.c | 33 +++++++++++++++++++++++++++++++--
+ 1 file changed, 31 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:135:53: error: lvalue required as left operand of assignment
+  135 |     if(list->current == list->head && list->current = list->tail){
+      |                                                     ^
+Compilation failed
+88661e2

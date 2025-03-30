@@ -127,8 +127,37 @@ void * popCurrent(List * list) {
     if(list->current == NULL){
         return NULL;
     }
-    free(list->current->data);
-    return list->current->data;
+    Node *nodoEliminado = list->current;
+    void *data = nodoEliminado->data;
+
+    //SI EL ELEMENTO A ELIMINAR ES EL UNICO
+
+    if(list->current == list->head && list->current = list->tail){
+        list->head = NULL;
+        list->tail = NULL;
+    }
+
+    //SI EL ELEMENTO A ELIMINAR ESTA EN EL HEAD
+
+    else if (list->current == list->head){
+        list->head = list->current->next;
+        list->head->prev = NULL;
+    }
+    
+    // Si el nodo actual es el último nodo
+    else if (list->current == list->tail){
+        list->tail = list->current->prev;
+        list->tail->next = NULL;
+    }
+    else {
+        list->current->prev->next = list->current->next;
+        list->current->next->prev = list->current->prev;
+    }
+
+    Node *temp = list->current->next;
+    free(nodoEliminado);
+    list->current = temp;
+    return data;
 }
 
 void cleanList(List * list) {
