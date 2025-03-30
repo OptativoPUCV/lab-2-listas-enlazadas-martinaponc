@@ -283,3 +283,14 @@ Sun 30 Mar 2025 01:10:00 AM UTC:
  tests:  9|3
 total_score: 35/70
 2601a6a
+Sun 30 Mar 2025 01:10:59 AM UTC: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:85:11: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
+   85 |     Node *nuevoNodo = createNode(data);
+      |           ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e69f12d
