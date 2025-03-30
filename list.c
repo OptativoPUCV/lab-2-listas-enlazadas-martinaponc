@@ -69,7 +69,7 @@ void * lastList(List * list) {
 
 void * prevList(List * list) {
     if (list->head == NULL || list->current == list->head)
-        return NULL
+        return NULL;
 
     Node *temp = list->head;
 
